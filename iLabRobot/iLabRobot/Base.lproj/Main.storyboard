@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Table View Controller-->
@@ -47,6 +48,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="点击开始识别" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
+                                <rect key="frame" x="258" y="373" width="84" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.67843137254901964" green="0.67843137254901964" blue="0.67843137254901964" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BGB-sF-2Zs" customClass="SiriWaveformView" customModule="iLabRobot" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="391" width="600" height="160"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -58,33 +65,42 @@
                                     <outletCollection property="gestureRecognizers" destination="d5f-0C-2aN" appends="YES" id="4zd-VN-HPb"/>
                                 </connections>
                             </view>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="alt-X7-cVA">
-                                <rect key="frame" x="20" y="85" width="560" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XeR-NK-DCR">
-                                <rect key="frame" x="78" y="148" width="30" height="30"/>
-                                <state key="normal" title="撤销"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XeR-NK-DCR">
+                                <rect key="frame" x="20" y="208" width="141" height="40"/>
+                                <state key="normal" title="撤销" backgroundImage="repealBtn">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4mC-ys-Jz6">
-                                <rect key="frame" x="419" y="148" width="60" height="30"/>
-                                <state key="normal" title="发送指令"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4mC-ys-Jz6">
+                                <rect key="frame" x="438" y="208" width="142" height="40"/>
+                                <state key="normal" title="发送指令" backgroundImage="sendKeyBtn">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="点击开始识别" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
-                                <rect key="frame" x="258" y="373" width="84" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" red="0.67843137254901964" green="0.67843137254901964" blue="0.67843137254901964" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fvj-Ti-16g">
+                                <rect key="frame" x="20" y="77" width="560" height="120"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="sR0-xz-Vpa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="fvj-Ti-16g" secondAttribute="leading" id="86r-fW-wea"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fvj-Ti-16g" secondAttribute="trailing" id="BE4-2A-nvU"/>
                             <constraint firstItem="NDk-cv-Gan" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="IgM-B5-Hv2"/>
+                            <constraint firstItem="4mC-ys-Jz6" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="144" id="J8h-cS-R8r"/>
+                            <constraint firstItem="fvj-Ti-16g" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="13" id="Nuu-XU-qON"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4mC-ys-Jz6" secondAttribute="trailing" id="Zjg-1d-C7L"/>
+                            <constraint firstItem="XeR-NK-DCR" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="144" id="agz-QU-xoA"/>
                             <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="BGB-sF-2Zs" secondAttribute="bottom" id="ahz-2C-Gs1"/>
                             <constraint firstAttribute="trailing" secondItem="BGB-sF-2Zs" secondAttribute="trailing" id="jyf-iq-sW0"/>
                             <constraint firstItem="BGB-sF-2Zs" firstAttribute="top" secondItem="NDk-cv-Gan" secondAttribute="bottom" constant="1" id="kwD-e0-V8P"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="XeR-NK-DCR" secondAttribute="leading" id="mZg-0v-cSx"/>
                             <constraint firstItem="BGB-sF-2Zs" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="u7c-Te-Xwh"/>
                         </constraints>
                     </view>
@@ -124,11 +140,11 @@
             </objects>
             <point key="canvasLocation" x="-334" y="-52"/>
         </scene>
-        <!--First-->
+        <!--连接-->
         <scene sceneID="tq2-FK-5QI">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3QZ-lZ-1Cp" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="连接" image="tabbar_connect_nm" selectedImage="tabbar_connect_sl" id="acW-dT-cKf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="xhK-2u-xyz">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -143,11 +159,11 @@
             </objects>
             <point key="canvasLocation" x="698" y="-1156"/>
         </scene>
-        <!--Second-->
+        <!--语音-->
         <scene sceneID="Cru-e4-y5l">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ARZ-8r-bRX" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="语音" image="tabbar_voice_nm" selectedImage="tabbar_voice_sl" id="cPa-gy-q4n"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="lec-q6-8mW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -181,11 +197,11 @@
             </objects>
             <point key="canvasLocation" x="1878" y="406"/>
         </scene>
-        <!--Item-->
+        <!--地图-->
         <scene sceneID="viK-bI-eVT">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jdr-34-Cx4" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="nDh-8i-WV9"/>
+                    <tabBarItem key="tabBarItem" title="地图" image="tabbar_map_nm" selectedImage="tabbar_map_sl" id="nDh-8i-WV9"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="x03-gl-Gbf">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -202,7 +218,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
+        <image name="repealBtn" width="141" height="40"/>
+        <image name="sendKeyBtn" width="142" height="40"/>
+        <image name="tabbar_connect_nm" width="21" height="21"/>
+        <image name="tabbar_connect_sl" width="21" height="21"/>
+        <image name="tabbar_map_nm" width="22" height="24"/>
+        <image name="tabbar_map_sl" width="22" height="23"/>
+        <image name="tabbar_voice_nm" width="20" height="22"/>
+        <image name="tabbar_voice_sl" width="20" height="22"/>
     </resources>
 </document>
