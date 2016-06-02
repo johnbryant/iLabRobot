@@ -15,10 +15,13 @@ class RecordedAudio: NSObject
     var title: String!
 }
 
-class VoiceControlViewController : UIViewController, AVAudioRecorderDelegate {
+class VoiceControlViewController : UIViewController, AVAudioRecorderDelegate, IFlySpeechRecognizerDelegate {
     
     @IBOutlet weak var waveformView: SiriWaveformView!
     @IBOutlet weak var recordLabel: UILabel!
+    
+    var iFlySpeechUnderstander: IFlySpeechUnderstander!
+    var iFlyUnderStand: IFlyTextUnderstander!
     
     var audioRecorder: AVAudioRecorder!
     var recordedAudio = RecordedAudio()
@@ -37,6 +40,7 @@ class VoiceControlViewController : UIViewController, AVAudioRecorderDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "语音控制"
         
     }
     
@@ -91,4 +95,33 @@ class VoiceControlViewController : UIViewController, AVAudioRecorderDelegate {
         
         return audioRecorder
     }
+    
+    
+    
+    // 开始识别回调
+    func onBeginOfSpeech() {
+        print("正在录音")
+    }
+    
+    // 停止识别回调
+    func onEndOfSpeech() {
+        print("停止录音")
+    }
+    
+    func onError(errorCode: IFlySpeechError!) {
+        print("error")
+    }
+    
+    // 语义理解结果回调
+    func onResults(results: [AnyObject]!, isLast: Bool) {
+        print("识别结果")
+    }
+    
+    // 取消回调
+    func onCancel() {
+        print("识别取消")
+    }
+    
+    
+    
 }

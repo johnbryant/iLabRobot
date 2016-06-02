@@ -11,6 +11,18 @@
 		093138421CFFF3E800A1D87B /* ConnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093138411CFFF3E800A1D87B /* ConnectViewController.swift */; };
 		093138441CFFF43500A1D87B /* VoiceControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093138431CFFF43500A1D87B /* VoiceControlViewController.swift */; };
 		093138461CFFF45100A1D87B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093138451CFFF45100A1D87B /* MapViewController.swift */; };
+		093138631D00612C00A1D87B /* iflyMSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 093138621D00612C00A1D87B /* iflyMSC.framework */; };
+		093138671D0061AA00A1D87B /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 093138661D0061AA00A1D87B /* libz.tbd */; };
+		093138691D0061B200A1D87B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 093138681D0061B200A1D87B /* AVFoundation.framework */; };
+		0931386B1D0061BB00A1D87B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0931386A1D0061BB00A1D87B /* SystemConfiguration.framework */; };
+		0931386D1D0061C200A1D87B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0931386C1D0061C200A1D87B /* Foundation.framework */; };
+		0931386F1D0061CA00A1D87B /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0931386E1D0061CA00A1D87B /* CoreTelephony.framework */; };
+		093138711D0061D100A1D87B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 093138701D0061D100A1D87B /* AudioToolbox.framework */; };
+		093138731D0061D900A1D87B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 093138721D0061D900A1D87B /* UIKit.framework */; };
+		093138751D0061E400A1D87B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 093138741D0061E400A1D87B /* CoreLocation.framework */; };
+		093138771D0061EB00A1D87B /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 093138761D0061EB00A1D87B /* AddressBook.framework */; };
+		093138791D0061F200A1D87B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 093138781D0061F200A1D87B /* QuartzCore.framework */; };
+		0931387B1D0061F800A1D87B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0931387A1D0061F800A1D87B /* CoreGraphics.framework */; };
 		09BBA8E31CEDFB6100ED1408 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BBA8E21CEDFB6100ED1408 /* AppDelegate.swift */; };
 		09BBA8EA1CEDFB6100ED1408 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09BBA8E81CEDFB6100ED1408 /* Main.storyboard */; };
 		09BBA8EC1CEDFB6100ED1408 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09BBA8EB1CEDFB6100ED1408 /* Assets.xcassets */; };
@@ -22,6 +34,19 @@
 		093138411CFFF3E800A1D87B /* ConnectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectViewController.swift; sourceTree = "<group>"; };
 		093138431CFFF43500A1D87B /* VoiceControlViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceControlViewController.swift; sourceTree = "<group>"; };
 		093138451CFFF45100A1D87B /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		093138621D00612C00A1D87B /* iflyMSC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iflyMSC.framework; path = iLabRobot/iflyMSC.framework; sourceTree = "<group>"; };
+		093138651D00616400A1D87B /* SwiftUsingOc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftUsingOc.h; sourceTree = "<group>"; };
+		093138661D0061AA00A1D87B /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		093138681D0061B200A1D87B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		0931386A1D0061BB00A1D87B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		0931386C1D0061C200A1D87B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0931386E1D0061CA00A1D87B /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		093138701D0061D100A1D87B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		093138721D0061D900A1D87B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		093138741D0061E400A1D87B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		093138761D0061EB00A1D87B /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		093138781D0061F200A1D87B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		0931387A1D0061F800A1D87B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		09BBA8DF1CEDFB6100ED1408 /* iLabRobot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iLabRobot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09BBA8E21CEDFB6100ED1408 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09BBA8E91CEDFB6100ED1408 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -35,6 +60,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0931387B1D0061F800A1D87B /* CoreGraphics.framework in Frameworks */,
+				093138791D0061F200A1D87B /* QuartzCore.framework in Frameworks */,
+				093138771D0061EB00A1D87B /* AddressBook.framework in Frameworks */,
+				093138751D0061E400A1D87B /* CoreLocation.framework in Frameworks */,
+				093138731D0061D900A1D87B /* UIKit.framework in Frameworks */,
+				093138711D0061D100A1D87B /* AudioToolbox.framework in Frameworks */,
+				0931386F1D0061CA00A1D87B /* CoreTelephony.framework in Frameworks */,
+				0931386D1D0061C200A1D87B /* Foundation.framework in Frameworks */,
+				0931386B1D0061BB00A1D87B /* SystemConfiguration.framework in Frameworks */,
+				093138691D0061B200A1D87B /* AVFoundation.framework in Frameworks */,
+				093138671D0061AA00A1D87B /* libz.tbd in Frameworks */,
+				093138631D00612C00A1D87B /* iflyMSC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,9 +89,29 @@
 			name = ViewController;
 			sourceTree = "<group>";
 		};
+		093138641D00613F00A1D87B /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				093138651D00616400A1D87B /* SwiftUsingOc.h */,
+			);
+			name = SupportingFiles;
+			sourceTree = "<group>";
+		};
 		09BBA8D61CEDFB6100ED1408 = {
 			isa = PBXGroup;
 			children = (
+				0931387A1D0061F800A1D87B /* CoreGraphics.framework */,
+				093138781D0061F200A1D87B /* QuartzCore.framework */,
+				093138761D0061EB00A1D87B /* AddressBook.framework */,
+				093138741D0061E400A1D87B /* CoreLocation.framework */,
+				093138721D0061D900A1D87B /* UIKit.framework */,
+				093138701D0061D100A1D87B /* AudioToolbox.framework */,
+				0931386E1D0061CA00A1D87B /* CoreTelephony.framework */,
+				0931386C1D0061C200A1D87B /* Foundation.framework */,
+				0931386A1D0061BB00A1D87B /* SystemConfiguration.framework */,
+				093138681D0061B200A1D87B /* AVFoundation.framework */,
+				093138661D0061AA00A1D87B /* libz.tbd */,
+				093138621D00612C00A1D87B /* iflyMSC.framework */,
 				09BBA8E11CEDFB6100ED1408 /* iLabRobot */,
 				09BBA8E01CEDFB6100ED1408 /* Products */,
 			);
@@ -71,6 +128,7 @@
 		09BBA8E11CEDFB6100ED1408 /* iLabRobot */ = {
 			isa = PBXGroup;
 			children = (
+				093138641D00613F00A1D87B /* SupportingFiles */,
 				0931383E1CFFF36000A1D87B /* ViewController */,
 				09BBA8E21CEDFB6100ED1408 /* AppDelegate.swift */,
 				09BBA8E81CEDFB6100ED1408 /* Main.storyboard */,
@@ -269,10 +327,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/iLabRobot",
+				);
 				INFOPLIST_FILE = iLabRobot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.JohnBryant.iLabRobot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/johnbryant/Desktop/毕业设计/iLabRobot/iLabRobot/iLabRobot/SwiftUsingOc.h";
 			};
 			name = Debug;
 		};
@@ -280,10 +344,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/iLabRobot",
+				);
 				INFOPLIST_FILE = iLabRobot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.JohnBryant.iLabRobot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/johnbryant/Desktop/毕业设计/iLabRobot/iLabRobot/iLabRobot/SwiftUsingOc.h";
 			};
 			name = Release;
 		};

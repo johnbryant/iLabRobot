@@ -16,6 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        IFlySetting.setLogFile(.LVL_ALL)
+        IFlySetting.showLogcat(true)
+        
+        let initString = "appid=56dbc476"
+        IFlySpeechUtility.createUtility(initString)
+        
         return true
     }
 
