@@ -7,19 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		093138401CFFF3A400A1D87B /* SiriWaveformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0931383F1CFFF3A400A1D87B /* SiriWaveformView.swift */; };
+		093138421CFFF3E800A1D87B /* ConnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093138411CFFF3E800A1D87B /* ConnectViewController.swift */; };
+		093138441CFFF43500A1D87B /* VoiceControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093138431CFFF43500A1D87B /* VoiceControlViewController.swift */; };
+		093138461CFFF45100A1D87B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093138451CFFF45100A1D87B /* MapViewController.swift */; };
 		09BBA8E31CEDFB6100ED1408 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BBA8E21CEDFB6100ED1408 /* AppDelegate.swift */; };
-		09BBA8E51CEDFB6100ED1408 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BBA8E41CEDFB6100ED1408 /* FirstViewController.swift */; };
-		09BBA8E71CEDFB6100ED1408 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BBA8E61CEDFB6100ED1408 /* SecondViewController.swift */; };
 		09BBA8EA1CEDFB6100ED1408 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09BBA8E81CEDFB6100ED1408 /* Main.storyboard */; };
 		09BBA8EC1CEDFB6100ED1408 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09BBA8EB1CEDFB6100ED1408 /* Assets.xcassets */; };
 		09BBA8EF1CEDFB6100ED1408 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09BBA8ED1CEDFB6100ED1408 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0931383F1CFFF3A400A1D87B /* SiriWaveformView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SiriWaveformView.swift; sourceTree = "<group>"; };
+		093138411CFFF3E800A1D87B /* ConnectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectViewController.swift; sourceTree = "<group>"; };
+		093138431CFFF43500A1D87B /* VoiceControlViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceControlViewController.swift; sourceTree = "<group>"; };
+		093138451CFFF45100A1D87B /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		09BBA8DF1CEDFB6100ED1408 /* iLabRobot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iLabRobot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09BBA8E21CEDFB6100ED1408 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		09BBA8E41CEDFB6100ED1408 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		09BBA8E61CEDFB6100ED1408 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		09BBA8E91CEDFB6100ED1408 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		09BBA8EB1CEDFB6100ED1408 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09BBA8EE1CEDFB6100ED1408 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,6 +41,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0931383E1CFFF36000A1D87B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				093138411CFFF3E800A1D87B /* ConnectViewController.swift */,
+				093138431CFFF43500A1D87B /* VoiceControlViewController.swift */,
+				093138451CFFF45100A1D87B /* MapViewController.swift */,
+				0931383F1CFFF3A400A1D87B /* SiriWaveformView.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
 		09BBA8D61CEDFB6100ED1408 = {
 			isa = PBXGroup;
 			children = (
@@ -56,9 +71,8 @@
 		09BBA8E11CEDFB6100ED1408 /* iLabRobot */ = {
 			isa = PBXGroup;
 			children = (
+				0931383E1CFFF36000A1D87B /* ViewController */,
 				09BBA8E21CEDFB6100ED1408 /* AppDelegate.swift */,
-				09BBA8E41CEDFB6100ED1408 /* FirstViewController.swift */,
-				09BBA8E61CEDFB6100ED1408 /* SecondViewController.swift */,
 				09BBA8E81CEDFB6100ED1408 /* Main.storyboard */,
 				09BBA8EB1CEDFB6100ED1408 /* Assets.xcassets */,
 				09BBA8ED1CEDFB6100ED1408 /* LaunchScreen.storyboard */,
@@ -138,9 +152,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09BBA8E71CEDFB6100ED1408 /* SecondViewController.swift in Sources */,
+				093138421CFFF3E800A1D87B /* ConnectViewController.swift in Sources */,
+				093138401CFFF3A400A1D87B /* SiriWaveformView.swift in Sources */,
+				093138441CFFF43500A1D87B /* VoiceControlViewController.swift in Sources */,
+				093138461CFFF45100A1D87B /* MapViewController.swift in Sources */,
 				09BBA8E31CEDFB6100ED1408 /* AppDelegate.swift in Sources */,
-				09BBA8E51CEDFB6100ED1408 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +306,7 @@
 				09BBA8F51CEDFB6100ED1408 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
