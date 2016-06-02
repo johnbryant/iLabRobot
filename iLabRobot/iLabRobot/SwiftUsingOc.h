@@ -18,5 +18,6 @@
 //#import "iflyMSC/IFlyTextUnderstander.h"
 
 #import "iflyMSC/IFlyMSC.h"
+#import "IATConfig.h"
 
 #endif /* SwiftUsingOc_h */

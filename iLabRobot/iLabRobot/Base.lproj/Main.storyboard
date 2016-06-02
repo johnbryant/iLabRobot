@@ -64,7 +64,7 @@
                                     <outletCollection property="gestureRecognizers" destination="d5f-0C-2aN" appends="YES" id="4zd-VN-HPb"/>
                                 </connections>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XeR-NK-DCR">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XeR-NK-DCR">
                                 <rect key="frame" x="20" y="208" width="141" height="40"/>
                                 <state key="normal" title="撤销" backgroundImage="repealBtn">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -108,6 +108,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="recordLabel" destination="NDk-cv-Gan" id="ifx-ZY-peP"/>
+                        <outlet property="voiceText" destination="fvj-Ti-16g" id="mfH-jJ-RCH"/>
                         <outlet property="waveformView" destination="BGB-sF-2Zs" id="z8J-ow-KhH"/>
                     </connections>
                 </viewController>
