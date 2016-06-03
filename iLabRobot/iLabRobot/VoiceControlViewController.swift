@@ -22,7 +22,8 @@ class VoiceControlViewController : UIViewController, AVAudioRecorderDelegate, IF
     
     var iFlySpeechUnderstander: IFlySpeechUnderstander!
     
-
+    var voiceResult = ""
+    var understandResult: [String]!
     var audioRecorder: AVAudioRecorder!
     var recordedAudio = RecordedAudio()
     
@@ -36,6 +37,29 @@ class VoiceControlViewController : UIViewController, AVAudioRecorderDelegate, IF
                 waveformView.waveColor = UIColor.blackColor()
             }
         }
+    }
+    
+    
+    @IBAction func resetVoice(sender: AnyObject) {
+        if !isRecording {
+            self.voiceText.text = ""
+        }
+    }
+    
+    @IBAction func sendCommand(sender: AnyObject) {
+        if !isRecording && self.voiceResult != "" {
+            let confirmVC = self.storyboard?.instantiateViewControllerWithIdentifier("confirmViewController") as! ConfirmVoiceCommand
+            confirmVC.underStandResult = self.understandResult
+            confirmVC.voiceResult = self.voiceResult
+            self.navigationController?.pushViewController(confirmVC, animated: true)
+        } else {
+            let alert = UIAlertController(title: "没有识别结果", message: "", preferredStyle: .Alert)
+            let action = UIAlertAction(title: "确认", style: .Default, handler: nil)
+            alert.addAction(action)
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
+
+        
     }
     
     
@@ -77,7 +101,8 @@ class VoiceControlViewController : UIViewController, AVAudioRecorderDelegate, IF
     
     // 启动语音语义理解
     func recordAudio() {
-        self.voiceText.text = "蛤？"
+        self.voiceText.text = ""
+        self.voiceResult = ""
         self.voiceText.resignFirstResponder()
         
         iFlySpeechUnderstander.setParameter(IFLY_AUDIO_SOURCE_MIC, forKey: "audio_source")
@@ -161,12 +186,47 @@ class VoiceControlViewController : UIViewController, AVAudioRecorderDelegate, IF
     // 语义理解结果回调
     func onResults(results: [AnyObject]!, isLast: Bool) {
         print("识别结果: \(results)")
+        var result = ""
+        var dic = [:]
+        if let voiceResults = results {
+            dic = voiceResults[0] as! NSDictionary
+            for (key, _) in dic {
+                result += "\(key)"
+            }
+        }
+        
+        self.understandResult = resolveVoiceResult(result)
+        for k in understandResult {
+            print("k: \(k)")
+            self.voiceResult += k
+        }
+        self.understandResult.popLast()
+        self.voiceText.text = voiceResult
+        self.voiceText.resignFirstResponder()
 
     }
     
     // 取消回调
     func onCancel() {
         print("识别取消")
+    }
+    
+    func resolveVoiceResult(string: String) -> [String] {
+        var result = [String]()
+        let stringRemove1 = string.stringByReplacingOccurrencesOfString("{", withString: "")
+        let stringRemove2 = stringRemove1.stringByReplacingOccurrencesOfString("[", withString: "")
+        let stringRemove3 = stringRemove2.stringByReplacingOccurrencesOfString("]", withString: "")
+        let stringRemove4 = stringRemove3.stringByReplacingOccurrencesOfString("}", withString: "")
+//        let stringRemove5 = stringRemove4.stringByReplacingOccurrencesOfString("\"", withString: "")
+        let Array = stringRemove4.componentsSeparatedByString(",")
+        for e in Array {
+            if e.containsString("\"w\"") {
+                let ee = e.componentsSeparatedByString(":")
+                let eee = ee[1].stringByReplacingOccurrencesOfString("\"", withString: "")
+                result.append(eee)
+            }
+        }
+        return result
     }
     
     

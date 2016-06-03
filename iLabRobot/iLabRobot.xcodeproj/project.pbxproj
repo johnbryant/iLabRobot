@@ -24,6 +24,7 @@
 		093138791D0061F200A1D87B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 093138781D0061F200A1D87B /* QuartzCore.framework */; };
 		0931387B1D0061F800A1D87B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0931387A1D0061F800A1D87B /* CoreGraphics.framework */; };
 		0931387E1D0086E300A1D87B /* IATConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 0931387D1D0086E300A1D87B /* IATConfig.m */; };
+		09B9E0DC1D01EF0700B2689B /* ConfirmVoiceCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B9E0DB1D01EF0700B2689B /* ConfirmVoiceCommand.swift */; };
 		09BBA8E31CEDFB6100ED1408 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BBA8E21CEDFB6100ED1408 /* AppDelegate.swift */; };
 		09BBA8EA1CEDFB6100ED1408 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09BBA8E81CEDFB6100ED1408 /* Main.storyboard */; };
 		09BBA8EC1CEDFB6100ED1408 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09BBA8EB1CEDFB6100ED1408 /* Assets.xcassets */; };
@@ -50,6 +51,7 @@
 		0931387A1D0061F800A1D87B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		0931387D1D0086E300A1D87B /* IATConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IATConfig.m; sourceTree = "<group>"; };
 		0931387F1D00872700A1D87B /* IATConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IATConfig.h; sourceTree = "<group>"; };
+		09B9E0DB1D01EF0700B2689B /* ConfirmVoiceCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmVoiceCommand.swift; sourceTree = "<group>"; };
 		09BBA8DF1CEDFB6100ED1408 /* iLabRobot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iLabRobot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09BBA8E21CEDFB6100ED1408 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09BBA8E91CEDFB6100ED1408 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				093138431CFFF43500A1D87B /* VoiceControlViewController.swift */,
 				093138451CFFF45100A1D87B /* MapViewController.swift */,
 				0931383F1CFFF3A400A1D87B /* SiriWaveformView.swift */,
+				09B9E0DB1D01EF0700B2689B /* ConfirmVoiceCommand.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 				093138421CFFF3E800A1D87B /* ConnectViewController.swift in Sources */,
 				093138401CFFF3A400A1D87B /* SiriWaveformView.swift in Sources */,
 				093138441CFFF43500A1D87B /* VoiceControlViewController.swift in Sources */,
+				09B9E0DC1D01EF0700B2689B /* ConfirmVoiceCommand.swift in Sources */,
 				093138461CFFF45100A1D87B /* MapViewController.swift in Sources */,
 				0931387E1D0086E300A1D87B /* IATConfig.m in Sources */,
 				09BBA8E31CEDFB6100ED1408 /* AppDelegate.swift in Sources */,
