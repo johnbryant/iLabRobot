@@ -333,10 +333,10 @@
             </objects>
             <point key="canvasLocation" x="872" y="-394"/>
         </scene>
-        <!--View Controller-->
+        <!--地图-->
         <scene sceneID="YNd-Zu-SQF">
             <objects>
-                <viewController id="k59-AN-m2G" sceneMemberID="viewController">
+                <viewController id="k59-AN-m2G" customClass="MapViewController" customModule="iLabRobot" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9Uw-1p-1wZ"/>
                         <viewControllerLayoutGuide type="bottom" id="qup-jB-b0a"/>
@@ -344,9 +344,52 @@
                     <view key="view" contentMode="scaleToFill" id="JZa-la-Prj">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="72b-FJ-YLd">
+                                <rect key="frame" x="7" y="422" width="141" height="40"/>
+                                <state key="normal" title="同步地图" backgroundImage="repealBtn">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="SyncMap:" destination="k59-AN-m2G" eventType="touchUpInside" id="i1I-mt-4uH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E0L-So-BG2">
+                                <rect key="frame" x="450" y="422" width="142" height="40"/>
+                                <state key="normal" title="出发" backgroundImage="sendKeyBtn">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendCommand:" destination="k59-AN-m2G" eventType="touchUpInside" id="cOy-kH-SdN"/>
+                                </connections>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6za-BF-1kK">
+                                <rect key="frame" x="7" y="72" width="585" height="342"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="342" id="aaw-9K-Dta"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="k59-AN-m2G" id="dOO-JI-Fu1"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="6za-BF-1kK" secondAttribute="trailing" constant="-12" id="6WN-dE-oVi"/>
+                            <constraint firstItem="72b-FJ-YLd" firstAttribute="top" secondItem="6za-BF-1kK" secondAttribute="bottom" constant="8" id="9Ex-DK-5zO"/>
+                            <constraint firstItem="72b-FJ-YLd" firstAttribute="leading" secondItem="JZa-la-Prj" secondAttribute="leadingMargin" constant="-13" id="9Xc-ro-cXS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="E0L-So-BG2" secondAttribute="trailing" constant="-12" id="BfB-St-RT4"/>
+                            <constraint firstItem="E0L-So-BG2" firstAttribute="top" secondItem="6za-BF-1kK" secondAttribute="bottom" constant="8" id="c7b-Pg-ACO"/>
+                            <constraint firstItem="6za-BF-1kK" firstAttribute="leading" secondItem="JZa-la-Prj" secondAttribute="leadingMargin" constant="-13" id="itc-Ux-pFL"/>
+                            <constraint firstItem="6za-BF-1kK" firstAttribute="top" secondItem="9Uw-1p-1wZ" secondAttribute="bottom" constant="8" id="zIr-N5-9GP"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="rUa-Ct-Fr4"/>
+                    <navigationItem key="navigationItem" title="地图" id="rUa-Ct-Fr4">
+                        <barButtonItem key="rightBarButtonItem" title="设置" id="9P4-yg-mHL"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="scrollView" destination="6za-BF-1kK" id="soN-1I-9WC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vij-3i-MdA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

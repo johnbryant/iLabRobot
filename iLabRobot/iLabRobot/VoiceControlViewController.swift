@@ -47,7 +47,7 @@ class VoiceControlViewController : UIViewController, AVAudioRecorderDelegate, IF
     }
     
     @IBAction func sendCommand(sender: AnyObject) {
-        if !isRecording && self.voiceResult != "" {
+        if !isRecording && self.voiceText.text != "" {
             let confirmVC = self.storyboard?.instantiateViewControllerWithIdentifier("confirmViewController") as! ConfirmVoiceCommand
             confirmVC.underStandResult = self.understandResult
             confirmVC.voiceResult = self.voiceResult
@@ -61,7 +61,6 @@ class VoiceControlViewController : UIViewController, AVAudioRecorderDelegate, IF
 
         
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
