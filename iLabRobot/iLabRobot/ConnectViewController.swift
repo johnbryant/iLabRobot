@@ -9,15 +9,17 @@
 import UIKit
 import CoreBluetooth
 
+
 class ConnecViewController: UITableViewController, CBCentralManagerDelegate, CBPeripheralDelegate {
     // 设置延迟队列
     let workingQueue = dispatch_queue_create("my_queue", nil)
-
+    var indicatorView: MONActivityIndicatorView!
+    
     @IBOutlet weak var connectButton: UIBarButtonItem!
     
     var noDeviceStateLabel = UILabel()
     var deviceNameText = "iLabRobotRX0001"
-
+    
     var isConnected = false {
         didSet {
             if isConnected {
@@ -59,7 +61,14 @@ class ConnecViewController: UITableViewController, CBCentralManagerDelegate, CBP
         noDeviceStateLabel.textColor = UIColor.grayColor()
         noDeviceStateLabel.frame = CGRectMake(110, 200, 110, 20)
         self.view.addSubview(noDeviceStateLabel)
+        
         self.manager = CBCentralManager(delegate: self, queue: nil)
+        
+        indicatorView = MONActivityIndicatorView()
+        indicatorView.center = self.view.center;
+        indicatorView.center.y -= 40
+        indicatorView.center.x -= 60
+        self.view.addSubview(indicatorView)
         
     }
     
@@ -104,6 +113,9 @@ class ConnecViewController: UITableViewController, CBCentralManagerDelegate, CBP
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        if self.isConnected {
+            
+        }
     }
     
     
@@ -146,30 +158,35 @@ class ConnecViewController: UITableViewController, CBCentralManagerDelegate, CBP
     
     @IBAction func setButton(sender: AnyObject) {
         if !pairRobot {
-            print("搜索设备...")
+            self.indicatorView.startAnimating()
             dispatch_async(workingQueue) {
                 NSThread.sleepForTimeInterval(3)
                 dispatch_async(dispatch_get_main_queue()) {
                     self.pairRobot = true
+                    self.indicatorView.stopAnimating()
                     self.tableView.reloadData()
                 }
             }
         } else {
             if !isConnected {
+                self.indicatorView.startAnimating()
                 dispatch_async(workingQueue) {
                     NSThread.sleepForTimeInterval(4)
                     dispatch_async(dispatch_get_main_queue()) {
                         self.isConnected = true
+                        self.indicatorView.stopAnimating()
                         self.tableView.reloadData()
                     }
                 }
 
                 print("连接设备")
             } else {
+                self.indicatorView.startAnimating()
                 dispatch_async(workingQueue) {
                     NSThread.sleepForTimeInterval(4)
                     dispatch_async(dispatch_get_main_queue()) {
                         self.isConnected = false
+                        self.indicatorView.stopAnimating()
                         self.tableView.reloadData()
                     }
                 }

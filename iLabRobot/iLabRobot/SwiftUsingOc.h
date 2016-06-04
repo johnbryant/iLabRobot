@@ -19,5 +19,6 @@
 
 #import "iflyMSC/IFlyMSC.h"
 #import "IATConfig.h"
+#import "MONActivityIndicatorView.h"
 
 #endif /* SwiftUsingOc_h */
