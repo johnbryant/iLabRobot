@@ -82,9 +82,11 @@ class MapViewController: UIViewController, UIScrollViewDelegate {
     }
     
     @IBAction func SyncMap(sender: AnyObject) {
+        print("同步地图")
     }
     
     @IBAction func sendCommand(sender: AnyObject) {
+        print("出发")
     }
     
     
